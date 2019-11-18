@@ -1,0 +1,41 @@
+﻿@model UserInput
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1><br />
+    <h2>To find your grade please enter the information below.</h2><br />
+</div>
+
+<div class="text-center border-dark blockquote">
+    <form method="post">
+        <label>Enter the total points the test is worth:</label>
+        <input type="text" min="0" placeholder="0.00" name="TotalPoints" /><br />
+
+        <label>Enter the total correct points given from the test:</label>
+        <input type="range" min="0" placeholder="0.00" name="TotalCorrect" /><br />
+
+        <input type="submit" class="btn-group-lg" asp-controller="Home" asp-action="FindGrade" method="post" value="Enter">
+    </form>
+</div>
+
+
+
+
+@*
+For a number interactive range- but needs to display number on hover
+
+<datalist class="custom-range">
+    <option value="0">0</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+    <option value="50">50</option>
+    <option value="60">60</option>
+    <option value="70">70</option>
+    <option value="80">80</option>
+    <option value="90">90</option>
+    <option value="100">100</option>
+</datalist>*@

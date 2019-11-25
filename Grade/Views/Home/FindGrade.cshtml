@@ -3,8 +3,38 @@
     ViewData["Title"] = "FindGrade";
 }
 
-<h1>FindGrade</h1>
+<h1>Grade Finder</h1><br />
 
 @model decimal
+<div class="text-center">
+    <div style="background-color:black; color:white">
+        <h2>@Model %</h2>
+    </div><br />
 
-@Model %
+    <div style="border-color:black">
+        @{
+            if (Model <= 60)
+            {
+                <h3>Grade: F</h3>
+            }
+            if (60 < Model && Model <= 66)
+            {
+                <h3>Grade: D</h3>
+            }
+            if (66 < Model && Model <= 79)
+            {
+                <h3>Grade: C</h3>
+            }
+            if (80 <= Model && Model <= 87)
+            {
+                <h3>Grade: B</h3>
+            }
+            if (Model > 87)
+            {
+                <h3>Grade: A</h3>
+            }
+        }
+    </div>
+</div>
+
+

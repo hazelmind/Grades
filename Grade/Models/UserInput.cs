@@ -10,5 +10,4 @@ namespace Grade.Models
         public decimal TotalPoints { get; set; }
         public decimal TotalCorrect { get; set; }
     }
-    
 }

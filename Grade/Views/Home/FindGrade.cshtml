@@ -11,30 +11,58 @@
         <h2>@Model %</h2>
     </div><br />
 
-    <div style="border-color:black">
-        @{
-            if (Model <= 60)
-            {
-                <h3>Grade: F</h3>
-            }
-            if (60 < Model && Model <= 66)
-            {
-                <h3>Grade: D</h3>
-            }
-            if (66 < Model && Model <= 79)
-            {
-                <h3>Grade: C</h3>
-            }
-            if (80 <= Model && Model <= 87)
-            {
-                <h3>Grade: B</h3>
-            }
-            if (Model > 87)
-            {
-                <h3>Grade: A</h3>
-            }
-        }
-    </div>
+          <div style="border-color:black">
+              @{
+                  if (Model < 65)
+                  {
+                      <h3>Grade: F</h3>
+                  }
+                      if (Model >= 66 && Model <= 66)
+                      {
+                          <h3> D</h3>
+                      }
+                      if (Model > 66 & Model <= 69)
+                      {
+                          <h3>D +</h3>
+                      }
+                  if (Model < 69 && Model >= 72)
+                  {
+                      <h3>C -</h3>
+                  }
+                  if (Model > 73 && Model <= 76)
+                  {
+                      <h3> C</h3>
+                  }
+                  if (Model > 76 && Model <= 79)
+                  {
+                      <h3>C +</h3>
+                  }
+                      if (Model > 79 && Model <= 82)
+                      {
+                          <h3>B -</h3>
+                      }
+                      if (Model > 82 && Model <= 86)
+                      {
+                          <h3>B </h3>
+                      }
+                      if (Model > 86 && Model <= 89)
+                      {
+                          <h3>B +</h3>
+                      }
+                  if (Model > 89 && Model <= 92)
+                  {
+                      <h3> A -</h3>
+                  }
+                  if (Model > 92 && Model <= 96)
+                  {
+                      <h3> A </h3>
+                  }
+                  if (Model > 96)
+                  {
+                      <h3> A +</h3>
+                  }
+              }
+          </div>
 </div>
 
 
